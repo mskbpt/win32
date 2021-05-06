@@ -22,7 +22,7 @@ The AutoClaims Class is defined as a subclass of [System.Windows.Forms.Form](/do
 > [!Note]  
 > Versions of this sample are available in C\# and Visual Basic .NET. The version discussed in this section is Visual Basic .NET. The concepts are the same between versions.
 
- 
+ 
 
 ## Defining the Form and Ink Layers
 
@@ -36,7 +36,7 @@ Imports Microsoft.Ink
 
 
 
-```VB
+```C#
 // The Ink namespace, which contains the Tablet PC Platform API
 using Microsoft.Ink;
 ```
@@ -64,7 +64,7 @@ Dim selectedHidden As Boolean
 
 
 
-```VB
+```C#
 // Declare the array of ink layers used the vehicle illustration.
 InkLayer[] inkLayers;
 
@@ -103,7 +103,7 @@ inkLayers(3) = New InkLayer(New Ink(), Color.Aqua, False)
 
 
 
-```VB
+```C#
 // Initialize the empty ink
 emptyInk = new Ink();
 
@@ -129,7 +129,7 @@ lstAnnotationLayer.SelectedIndex = 0
 
 
 
-```VB
+```C#
 // By default, select the first ink layer
 lstAnnotationLayer.SelectedIndex = 0;
 ```
@@ -147,7 +147,7 @@ inkPictVehicle.DefaultDrawingAttributes.Color =
 
 
 
-```VB
+```C#
 inkPictVehicle.DefaultDrawingAttributes.Color = inkLayers[lstAnnotationLayer.SelectedIndex].ActiveColor;
 ```
 
@@ -176,7 +176,7 @@ End Sub
 
 
 
-```VB
+```C#
 private void inkPictVehicle_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
 {
     // Cycle through each ink layer.  If it is visible, paint it.
@@ -240,7 +240,7 @@ End Sub
 
 
 
-```VB
+```C#
 private void lstAnnotationLayer_SelectedIndexChanged(object sender, System.EventArgs e)
 {
     // Provided that the new selected index value is different than
@@ -327,7 +327,7 @@ End Sub
 
 
 
-```VB
+```C#
 private void chHideLayer_CheckedChanged(object sender, System.EventArgs e)
 {
     // Provided that the new checked hidden value is different than
@@ -383,6 +383,3 @@ In the Windows Form Designer generated code, the [InkEdit](/previous-versions/ms
 [InkEdit Control](inkedit-control.md)
 </dt> </dl>
 
- 
-
- 
